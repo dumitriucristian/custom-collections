@@ -7,8 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 abstract class AbstractFoodCollection extends ArrayCollection
 {
   
-   private $type = "food";
-
+    
     public function add(mixed $element): void
     {
         if (is_object($element)) {

@@ -22,11 +22,15 @@ class StorageService
     public function addFruits(): FruitCollection
     {
         $elements = json_decode($this->request);
-        $fruitCollection = new FruitCollection();
+    
+        $fruitCollection = new FruitCollection($elements);
+        dd($fruitCollection);
+        /*
         foreach($elements as $key => $value) {
             $fruitCollection->add($value);
         }
-         // dd($fruitCollection);
+        */
+          dd($fruitCollection);
         return $fruitCollection;
     }   
 
